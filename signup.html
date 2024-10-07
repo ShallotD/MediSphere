@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medisphere | Sign Up Page</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+    <div class="signup-form">
+        <form id="registrationForm" onsubmit="return false;">
+            <fieldset>
+                <legend>Registration Form</legend>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+                <div id="nameError" class="error"></div>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <div id="emailError" class="error"></div>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <div id="passwordError" class="error"></div>
+
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" required>
+                <div id="confirmPasswordError" class="error"></div>
+
+                <label for="age">Age</label>
+                <input type="number" id="age" required>
+                <div id="ageError" class="error"></div>
+
+                <label>Gender</label>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="female" required> Female
+                </label>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="male" required> Male
+                </label>
+                <div id="genderError" class="error"></div>
+
+                <label for="country">Country</label>
+                <select name="dropdown" id="country" required>
+                    <option value="">Select your Country</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="ethiopia">Ethiopia</option>
+                    <option value="somalia">Somalia</option>
+                    <option value="south_africa">South Africa</option>
+                    <option value="botswana">Botswana</option>
+                </select>
+                <div id="countryError" class="error"></div>
+
+                <label>
+                    <input type="checkbox" id="terms & conditions" required> I agree to the terms and conditions.
+                </label>
+                <div id="termsError" class="error"></div>
+
+                <button type="submit">Sign Up</button>
+                <a href="#" class="login-link">Already have an account? <span class="logIn">Log In</span></a>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
