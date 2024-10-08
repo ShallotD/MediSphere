@@ -93,9 +93,7 @@ body {
     margin: 4px 0;
 }
 
-.about-us {
-    padding: 20px;
-}
+
 
 /*Hero Section*/
 .hero-section {
@@ -176,6 +174,7 @@ body {
 .value p {
     font-size: 1em;
 }
+
 
 
 /*Responsive Design*/

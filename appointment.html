@@ -5,43 +5,270 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Appointment Booking at MediSphere</title>
 
+        <style>
+                        /* Base styling */
+            * {
+                margin: 0;
+                padding:0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            /* Navigation bar styling*/
+            .navbar {
+            background-color:steelblue;
+            padding: 20px 0;
+            position:fixed;
+            width:100%;
+            top: 0;
+            z-index: 1000;
+            }
+
+            .navbar-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+            }
+
+            .logo {
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+                text-decoration: none;
+                text-align: start;
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                align-items: center;
+            }
+
+            .nav-links li {
+                margin-left: 20px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                transition: color 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #f1c40f;
+            }
+
+            .btn {
+                padding: 8px 15px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .signup-btn {
+                background-color: #f39c12;
+                color: white;
+            }
+
+            .login-btn {
+                background: #2c3e50 ;
+                color: white;
+            }
+
+            .signup-btn:hover,
+            .login-btn:hover {
+                background-color: #e67e22;
+            }
+
+            .menu-icon {
+                display: none;
+                cursor: pointer;
+                flex-direction: column;
+            }
+
+            .menu-bar {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 4px 0;
+            }
+            
+            /* Book Appointment Section*/
+            .book-appointment {
+                background-color: #f4f4f4;
+                padding: 80px 20px;
+            }
+
+            .book-appointment .container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .book-appointment h2 {
+                text-align: center;
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+
+            .book-appointment form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                width: 90%;
+                padding: 10px;
+                border: 1px solid;
+                border-color: #ddd;
+                border-radius: 5px;
+                font-size: 1em;
+            }
+
+            .form-group textarea {
+                resize: vertical;
+                height: 100px;
+            }
+
+            button {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 15px;
+                font-size: 1em;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+
+            /* Responsive Design*/
+            @media (max-width: 768px) {
+                .book-appointment .container {
+                    padding: 15px;
+                }
+            }
+   
+
+        </style>
+
     </head>
 
     <body>
-        <form>
-            <h1>Book An Appointment</h1>
-            <label for="Your Full Name">Full Name</label>
-            <input type="text" id="Your Full Name" placeholder="Your Full Name">
-            <br>
+        <!--header segment-->
+        <header>
+            <nav class="navbar">
 
-            <label for="Email Address">Email Address</label>
-            <input type="text" id="Your Email Address" placeholder="Your Email Address">
-            <br>
+                <div class="navbar-container">
 
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" placeholder="Your Phone Number">
-            <br>
+                    <div>
+                        <a href="#" class="logo">MediSphere</a>
+                    </div>
 
-            <label for="date">Preferred Date</label>
-            <input type=""  id="date" placeholder="dd/mm/yyyy">
-            <br>
+                    <div>
+                        <ul class="nav-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#appointment">Book Appointment</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#signup" class="btn signup-btn">Sign Up</a></li>
+                            <li><a href="#login" class="btn login-btn">LogIn</a></li>
+                        </ul>
 
-            <label for="time">Preferred Time</label>
-            <input type="" id="time" >
-            <br>
+                    <!--Mobile Menu Icon-->
+                    <div class="menu-icon">
+                        <span class="menu-bar"></span>
+                        <span class="menu-bar"></span>
+                        <span class="menu-bar"></span>
+                    </div>
+                    </div>
 
-            <label for="specialization">Specialization</label>
-            <input type="dropdown" id="specialization" placeholder="Select Specialization">
-            <br>
+                </div>
+     
+            </nav>
+        </header>
 
-            <label>Additional Notes</label>
-            <input type="text" id="Additional info" placeholder="Any additional information or notes">
-            <br>
+        <!--Form Section-->
+        <section class="book-appointment">
+            <div class="container">                    
+                <h2>Book An Appointment</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="Your Full Name">Full Name</label>
+                        <input type="text" id="Your Full Name" name="name" required>
+                    </div>
+                  
+                    <div class="form-group"> 
+                        <label for="Email Address">Email Address</label>
+                        <input type="text" id="Your Email Address" name="email" required> 
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type=""  id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <input type="" id="time" name="time" required>
+                    </div>
 
-            <button type="text" href="">Book Appointment</button>
+                    <div class="form-group">
+                        <label for="specialization">Specialization</label>
+                        <select name="specialization" id="specialization" required>
+                            <option value="">Select Specialization</option>
+                            <option value="general">General Medicine</option>
+                            <option value="dentistry">Dentistry</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <!--Add more options-->
+                        </select>               
+                    </div>
 
-
-        </form>
+                    <div class="form-group">
+                        <label for="message">Additional Notes</label>
+                        <textarea name="message" id="message" placeholder="Any additional information or notes"></textarea>
+                    </div>
+        
+                    <button type="submit">Book Appointment</button> 
+                </form>
+    
+                        
+            </div>
+        </section>
+        
+        
         
         <p></p>
     </body>
