@@ -4,32 +4,89 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Providers Panel</title>
+        <link rel="stylesheet" href="/css/doctors.css">
 
     </head>
     <body>
-        <h1>Our Doctors</h1>
+        <!--header segment-->
+        <header>
+            <nav class="navbar">
 
-        <form>
-            <img src="" alt="Doctor Photo">
-            <p>Dr Ronito Waiswa</p>
-            <p>Specialty: Cardiology</p>
-            <p>Say more about the doc</p>
-            <button>Book an Appointment</button>
-            <br>
+                <div class="navbar-container">
 
-            <img src="" alt="Doctor Photo">
-            <p>Dr Rotham Kalende</p>
-            <p>Specialty: Dermatology</p>
-            <p>Say more about the doc</p>
-            <button>Book an Appointment</button>
-            <br>
+                    <div>
+                        <a href="#" class="logo">MediSphere</a>
+                    </div>
 
-            <img src="" alt="Doctor Photo">
-            <p>Dr John Smith</p>
-            <p>Specialty: Neurology</p>
-            <p>Say more about the doc</p>
-            <button>Book an Appointment</button>
-        </form>
+                    <div>
+                        <ul class="nav-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#appointment">Book Appointment</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#signup" class="btn signup-btn">Sign Up</a></li>
+                            <li><a href="#login" class="btn login-btn">LogIn</a></li>
+                        </ul>
 
+                    <!--Mobile Menu Icon-->
+                    <div class="menu-icon">
+                        <span class="menu-bar"></span>
+                        <span class="menu-bar"></span>
+                        <span class="menu-bar"></span>
+                    </div>
+                    </div>
+
+                </div>
+     
+            </nav>
+        </header>
+
+        <!--Section Doctor's Info-->
+        <section class="doctor-module">
+            <h2>Our Doctors</h2>
+            <div class="doctor-list">
+               
+                <div class="doctor-card">
+                    <img src="doctor1.jpg" alt="Dr john Doe">
+                    <div class="doctor-info">
+                        <h3>Dr John Doe</h3>
+                        <p>Specialty: Cardiology</p>
+                        <p>Dr. John Doe is a renowned cardiologist with over 15 years of experience in treating heart conditions. He is dedicated to providing the highest quality care and advancing cardiovascular medicine.</p>
+                        <button>Book an Appointment</button>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="doctor2.jpg" alt="Dr Jane Smith">
+                    <div class="doctor-info">
+                        <h3>Dr Jane Smith</h3>
+                        <p>Specialty: Dermatology</p>
+                        <p>Dr. Jane Smith is an expert in dermatology with a focus on skin cancer prevention and treatment. She is passionate about patient education and personalized care.</p>
+                        <button>Book an Appointment</button>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="doctor3.jpg" alt="Dr Roth Kalende">
+                    <div class="doctor-info">
+                        <h3>Dr Roth Kalende</h3>
+                        <p>Specialty: Neurology</p>
+                        <p>Dr. Roth Kalende is an expert in neurology with a focus on skin cancer prevention and treatment. She is passionate about patient education and personalized care.</p>
+                        <button>Book an Appointment</button>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="doctor4.jpg" alt="Dr Ronny Paul">
+                    <div class="doctor-info">
+                        <h3>Dr Rony Paul</h3>
+                        <p>Specialty: Dentist</p>
+                        <p>Dr. Rony Paul is an expert in dentistry with a focus on skin cancer prevention and treatment. He is passionate about patient education and personalized care.</p>
+                        <button>Book an Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
