@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediSphere | Log In Page</title>
     <link rel="stylesheet" href="/css/login.css">
+
 </head>
 <body>
+
+    <!--header segment-->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="logo">MediSphere</a>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#appointment">Book Appointment</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#signup" class="btn signup-btn">Sign Up</a></li>
+                    <li><a href="#login" class="btn login-btn">Log In</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="login-container">
         <form id="loginForm">
             <label for="email">Email</label>
@@ -18,11 +43,15 @@
             <div id="loginPasswordError" class="error"></div>
 
             <button type="submit">Log In</button>
+            <div id="loginSuccess" class="success"></div>
         </form>
     </div>
 
-    <script>
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+

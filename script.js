@@ -1,3 +1,4 @@
+/* Sign up form*/
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
     clearErrors();
@@ -79,7 +80,7 @@ function clearErrors() {
 
 
 
-
+/* LogIn Form */
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
     clearErrors(); // Clear previous error messages
@@ -120,7 +121,46 @@ function clearErrors() {
 }
 
 
+/* Appointment form */
+document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        specialization: document.getElementById('specialization').value,
+        message: document.getElementById('message').value
+    };
+
+    // Email validation
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    const emailField = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+
+    if (!emailPattern.test(emailField.value)) {
+        emailError.style.display = 'inline';
+        return; // Stop if email is invalid
+    } else {
+        emailError.style.display = 'none';
+    }
+
+    // Display form data in the summary section
+    const formSummary = document.getElementById('formSummary');
+    formSummary.innerHTML = `
+        <h3>Appointment Summary</h3>
+        <p><strong>Name:</strong> ${formData.name}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Phone:</strong> ${formData.phone}</p>
+        <p><strong>Date:</strong> ${formData.date}</p>
+        <p><strong>Time:</strong> ${formData.time}</p>
+        <p><strong>Specialization:</strong> ${formData.specialization}</p>
+        <p><strong>Notes:</strong> ${formData.message}</p>
+        <p><strong>Form has been successfully submitted.</strong></p>
+    `;
+});
 
 
 
